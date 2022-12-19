@@ -1,83 +1,155 @@
-nav ul li.button.v17:hover .icon:before, nav ul li.button.v17:hover span.icon:after 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+:root
 {
-  width: 100%;
+  --font-family: "Roboto", sans-serif;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #fcfcfc;
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
 }
-nav ul li.button.v17:hover .icon span:before, nav ul li.button.v17:hover span.icon span:after 
+
+html
 {
-  height: 100%;
+  scroll-behavior: smooth;
 }
-nav ul li.button.v17:hover span.icon2 
+
+*
 {
-  transform: skew(-40deg, 0deg) scale(1);
-  background: #f0202f;
-  z-index: -1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-nav ul li.button.v17 span.label 
+
+ul
 {
-  padding: 10px 22px;
+  list-style-type: none;
 }
-nav ul li.button.v17 span.icon2 
+
+a
 {
-  display: block;
-  position: absolute;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover
+{
+  color: var(--secondary-color);
+}
+
+body
+{
+  font-family: var(--font-family);
+}
+
+nav
+{
+  position: sticky;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  transform: skew(-40deg, 0deg) scaleX(0.2) scaleY(0.5);
-  transition: all 0.2s;
-  transition-delay: 0.2s;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 3.5rem;
+  background-color: var(--bg-color);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
-nav ul li.button.v17 span.icon 
+
+nav h1
 {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: skew(-40deg, 0deg);
-  transition: all 0.2s;
+  color: var(--primary-color);
 }
-nav ul li.button.v17 .icon:before, nav ul li.button.v17 span.icon:after 
+
+nav a
 {
-  content: "";
-  height: 1px;
-  width: 30px;
-  position: absolute;
-  display: block;
-  background: #f0202f;
-  transition: all 0.2s;
-  transition-delay: 0.2s;
+  color: var(--primary-color);
 }
-nav ul li.button.v17 span.icon:before 
+
+nav a:hover
 {
-  left: 0;
-  top: 0;
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
-nav ul li.button.v17 span.icon:after 
+
+nav ul
 {
-  right: 0;
-  bottom: 0;
+  display: flex;
+  gap: 1.9rem;
 }
-nav ul li.button.v17 span.icon span:before, nav ul li.button.v17 span.icon span:after 
+
+nav ul li
 {
-  content: "";
-  background: #f0202f;
-  position: absolute;
-  display: block;
-  width: 2px;
-  height: 30px;
-  transition: all 0.2s;
-  transition-delay: 0.2s;
+  font-weight: var(--bold-font);
 }
-nav ul li.button.v17 span.icon span:before 
+
+.burger-menu
 {
-  left: 0;
-  top: 0;
+  color: var(--primary-color);
+  font-size: 2rem;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  display: none;
 }
-nav ul li.button.v17 span.icon span:after 
+
+.hero
 {
-  right: 0;
-  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 68.75rem;
+  margin: auto;
 }
+
+.hero img
+{
+  height: 37.5rem;
+  width: 37.5rem;
+}
+
+.bio
+{
+  width: 25rem;
+  padding: 0.625rem;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px 2px var(--primary-shadow);
+}
+
+.bio h1
+{
+  margin-bottom: var(--bottom-margin);
+}
+
+.bio p
+{
+  line-height: var(--line-height);
+  padding: 0.3rem 0;
+}
+
+.more-about
+{
+  background-color: var(--bg-color);
+  padding: 1rem 6rem;
+}
+
+.more-about h2
+{
+  margin-bottom: var(--bottom-margin);
+  text-align: center;
+}
+
+.more-about p
+{
+  line-height: var(--line-height);
+  padding: 0.4rem;
+}
+
